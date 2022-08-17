@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>History API / ROUTING</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h3>History API / ROUTING</h3>
+					<p>
+						<small>Created by <a href="https://github.com/aRumakin">Andrei Rumakin</a></small>
+					</p>
+				</section>
+				<section>
+					<section>
+						<h3>History API </h3>
+						<p>allows you to record all your page transitions in the browser history</p>
+					</section>
+					<section>
+						<p>API History and Routing help implement the SPA principle in native Javascript</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<p>history.length</p>
+						<img src="./images/start.png" alt="Start">
+					</section>
+					<section>
+						<img src="./images/history.length.png" alt="Lenght first">
+					</section>
+					<section>
+						<img src="./images/history.length2.png" alt="Lenght second">
+					</section>
+					<section>
+						<img src="./images/history.length3.png" alt="Lenght third">
+					</section>
+					<section>
+						<img src="./images/history.length4.png" alt="Lenght fourth">
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>History methods</h3>
+						<p>You can go back and forward throughout your physical history using JavaScript.</p>
+					</section>
+					<section>
+						<p>history.back()</p>
+						<p>method makes the browser move back one page in the session history</p>
+					</section>
+					<section>
+						<p>history.forward()</p>
+						<p>method makes the browser move forward one page in the session history</p>
+					</section>
+					<section>
+						<p>history.go()</p>
+						<p>method loads a specific page from the session history. You can use it to move forwards and backwards through the history depending on the value of a parameter</p>
+					</section>
+					<section>
+						<p>history.go(-2)</p>
+						<p>allows you to go back through the history by 2 spaces</p>
+						<br>
+						<p>history.go(2)</p>
+						<p>allows you to go forward through the history by 2 spaces</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>ROUTING benefits</h2>
+						<ul>
+							<li>To reduce unnecessary reloads</li>
+							<li>For better user experience</li>
+							<li>It's internally handled by JS</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<p>pushState(state, unused, url) method adds an entry to the browser's session history stack</p>
+						<p>The state object is a JavaScript object which is associated with the new history entry created by pushState()</p>
+						<img src="./images/url-history.png" alt="History url">
+					</section>
+					<section>
+						<p>pushState(null, null, 'about')</p>
+						<img src="./images/url-history-about.png" alt="History/about url">
+					</section>
+					<section>
+						<p>replaceState(stateObj, unused, url)</p>
+						<p>method modifies the current history entry, replacing it with the state object and URL passed in the method parameters. This method is particularly useful when you want to update the state object or URL of the current history entry in response to some user action.</p>
+					</section>
+					<section>
+						<p>pushState(12, null, 'settings')</p>
+						<p>history.state => 12</p>
+					</section>
+					<section>
+						<p>replaceState(35, null, 'questions')</p>
+						<p>history.state => 35</p>
+						<img src="./images/url-history-questions.png" alt="History/questions-url">
+					</section>
+				</section>
+				<section>
+					<h3>The end</h3>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
